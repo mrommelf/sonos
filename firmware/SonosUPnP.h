@@ -23,7 +23,14 @@
 //#define SONOS_WRITE_ONLY_MODE
 
 #include "Arduino/Arduino.h"
-#include "avr/pgmspace.h"
+#ifdef __AVR__
+#include <avr/pgmspace.h>
+#else
+#define pgm_read_byte(addr) (*(const unsigned char *)(addr))
+#define pgm_read_byte_near(addr) (*(const unsigned char *)(addr))
+#define pgm_read_word(addr) (*(const unsigned short *)(addr))
+#define pgm_read_word_near(addr) (*(const unsigned short *)(addr))
+#endif
 #ifndef SONOS_WRITE_ONLY_MODE
 #include "../../MicroXPath/src/MicroXPath_P.h"
 #endif
