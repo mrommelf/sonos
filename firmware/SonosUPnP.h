@@ -20,7 +20,7 @@
 #ifndef SonosUPnP_h
 #define SonosUPnP_h
 
-//#define SONOS_WRITE_ONLY_MODE
+#define SONOS_WRITE_ONLY_MODE
 
 #include "Arduino/Arduino.h"
 #ifdef __AVR__
