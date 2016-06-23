@@ -1,0 +1,7 @@
+{
+  "name": "SonosUPnP",
+  "author": "Thomas Mittet <code@lookout.no>",
+  "license": "GPL",
+  "version": "1.1",
+  "description": "Allows Arduino boards to control the Sonos speaker system using UPnP. For all Arduino boards."
+}
